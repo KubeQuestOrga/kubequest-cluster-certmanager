@@ -10,7 +10,7 @@
 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
 sudo helm repo add jetstack https://charts.jetstack.io
 sudo helm repo update
-sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.16.2 --set crds.enabled=true --values values.yaml
+sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.17.1 --set crds.enabled=true --values values.yaml
 sudo kubectl apply -f cluster-issuer.yaml
 ```
 
